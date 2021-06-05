@@ -1,0 +1,4 @@
+com\shipment\util\MinimumZipCodeRangeGenerator.class
+com\shipment\job\ShipmentJob.class
+com\shipment\model\ZipCodeRange.class
+com\shipment\util\RangeCollectionSortUtil.class
