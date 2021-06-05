@@ -38,9 +38,7 @@ public class ShipmentJob {
 
 		try {
 			inputZipRanges = FileReaderAndWriterForZipRanges.readInputFile(inputFileLocation,delimiter);
-			System.out.println(inputZipRanges);
 			outputZipRanges = minimumZipCodeRangeGenerator.getMinimumRanges(inputZipRanges);
-			System.out.println(outputZipRanges);
 			
 			FileReaderAndWriterForZipRanges.writeOutputRanges(outputZipRanges,outputFileLocation,delimiter);
 		}catch(IOException e) {

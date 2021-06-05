@@ -18,7 +18,6 @@ public class MinimumZipCodeRangeGenerator {
 		//Sorting the list on the range so that even if the ranges are at different position in the input file 
 		//We will compare the two most nearest ranges
 		List<ZipCodeRange> sortedZipCodeRanges = RangeCollectionSortUtil.getSortedList(allInputZipCodeRanges);
-		System.out.println("Sorted :" + sortedZipCodeRanges);
 		
 		//Algorithm to merge the ranges
 		ArrayList<ZipCodeRange> result = new ArrayList<ZipCodeRange>();
@@ -37,7 +36,6 @@ public class MinimumZipCodeRangeGenerator {
             }
         }
         result.add(new ZipCodeRange(start, end));
-        System.out.println("result :" + result);
 		return result;
 	}
 

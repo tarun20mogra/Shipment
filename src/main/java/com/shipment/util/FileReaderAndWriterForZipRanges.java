@@ -24,13 +24,16 @@ public class FileReaderAndWriterForZipRanges {
 			
 		    String[] data = row.split(delimiter);
 		    	if(data.length != 2) {
-			    	throw new InvalidZipRangeInputException("Invalid zip ranges in the input file. Require two comma seperated values");
+			    	throw new InvalidZipRangeInputException("Invalid zip ranges in the input file. Require two '"+delimiter+"' seperated values");
 			    }else if(StringUtils.isEmpty(data[0]) || StringUtils.isEmpty(data[1])) {
-			    	throw new InvalidZipRangeInputException("Invalid zip ranges in the input file. Required comma seperated non null zip values");
+			    	throw new InvalidZipRangeInputException("Invalid zip ranges in the input file. Required '"+ delimiter +"' seperated non null zip values");
 			    }else if(data[0].length() != 5 || data[1].length() != 5) {
 			    	//This is because, as is mentioned in the problem the zip code ranges are for 5-digit zip code
 			    	throw new InvalidZipRangeInputException("Invalid zip ranges in the input file. Required only 5 digit zip code");
-			    }else {
+			    }else if(!StringUtils.isNumeric(data[0]) || !StringUtils.isNumeric(data[1])) {
+			    	throw new InvalidZipRangeInputException("Invalid zip ranges in the input file. Required only numeric values");
+			    }
+			    else {
 			    	resultInputZipRanges.add(new ZipCodeRange(Integer.parseInt(data[0]),Integer.parseInt(data[1])));
 			    }
 
