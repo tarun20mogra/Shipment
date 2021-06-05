@@ -11,3 +11,13 @@ Assumption
 4. If the input doesnt have the delimiter that user specified, program will throw a custom exception 
 5. If the input have more than two numeric digits, program will throw a custom exception 
 6. If input is not numeric program will throw a custom exception.
+
+How to run 
+1. You can run the Shipment job in com.shipment.job package. It requires three argument 
+  a. Input file with the 5 digit zip ranges (with your specified delimiter). example (45884,45554)
+  b. Delimiter you have kept in the input file.This delimiter will be used in the output file as well
+  c. output file location 
+
+
+Input and output File
+I have already ran the process with the input file present in src/main/resources/inputZipRanges.txt as the input file. Output is stored in src/main/resources/outputZipRange.txt
