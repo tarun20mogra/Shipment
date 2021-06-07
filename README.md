@@ -17,8 +17,7 @@ Business logic for the zip code merging to get the proper zip code ranges from t
   a. Input file with the 5 digit zip ranges (with your specified delimiter). example (45884,45554)
   b. Delimiter you have kept in the input file.This delimiter will be used in the output file as well
   c. output file location 
-
+2. You can also just put any range of zips in the JUnit test MinimumZipCodeRangeGeneratorTest. I have writted two sample test in the class.
 
 #Input and output File
-
 I have already ran the process with the input file present in src/main/resources/inputZipRanges.txt as the input file. Output is stored in src/main/resources/outputZipRange.txt
