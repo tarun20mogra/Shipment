@@ -10,7 +10,7 @@ import org.junit.Test;
 import com.shipment.model.ZipCodeRange;
 import com.shipment.util.MinimumZipCodeRangeGenerator;
 
-public class ValidateZipCodeTest {
+public class MinimumZipCodeRangeGeneratorTest {
 	
 	@Test
 	public void testZipCodeRangeSample1() {
